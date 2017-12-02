@@ -1,12 +1,10 @@
 #!/usr/bin/env elixir
 
-
 defmodule Main do
   def start() do
     getInput()
     |> String.codepoints
     |> iterate_part2()
-    #    |> (fn input -> elem(input, 1) end).()
     |> IO.inspect()
   end
 
@@ -32,6 +30,7 @@ defmodule Main do
         :false -> {item, acc} 
       end
     end)end).()
+    |> (fn input -> elem(input, 1) end).()
   end
 
   def iterate_part2(input) do
@@ -54,8 +53,8 @@ defmodule Main do
         :false -> {acc} 
       end
     end)end).()
+    |> (fn input -> elem(input, 0) end).()
   end
-
 end
 
 Main.start()
