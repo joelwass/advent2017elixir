@@ -9,11 +9,9 @@ defmodule Main do
   end
 
   def getInput() do
-    case File.read "./data/1a.txt" do
-      { :ok, body } -> 
-        body
-      { :error, reason } ->
-        reason
+    case File.read "./data/1.txt" do
+      { :ok, body } -> body
+      { :error, reason } -> reason
     end
   end
 
