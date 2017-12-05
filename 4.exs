@@ -46,8 +46,6 @@ defmodule Main do
       end
     end)
   end
-
-  
 end
 
 Main.start_2()
