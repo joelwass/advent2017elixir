@@ -9,14 +9,14 @@ defmodule Main do
   end
 
   def get_input() do
-    case File.read "./data/5.txt" do
+    case File.read "./data/5small.txt" do
       {:ok, body} -> body
       {:error, reason} -> reason
     end
   end
 
   # when index is out of bounds, do this
-  def move(input, index, count) when index >= length(input) do
+  def move(input, index, count) when index >= length(input) or index < 0 do
     IO.puts count
   end
 
